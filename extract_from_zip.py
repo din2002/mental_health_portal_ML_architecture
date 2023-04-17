@@ -10,12 +10,13 @@ def extract_files(zip_file, out_dir, delete_zip=False):
         os.makedirs(audio_dir)
 
     transcripts_dir = os.path.join(out_dir, 'transcripts')
-    if not os.path.exists(audio_dir):
+    if not os.path.exists(transcripts_dir):
         os.makedirs(transcripts_dir)
 
     zip_ref = zipfile.ZipFile(zip_file)
     for f in zip_ref.namelist(): 
         if f.endswith('.wav'):
+            print(f.split("/")[-1])
             zip_ref.extract(f, audio_dir)
         elif fnmatch.fnmatch(f, '*TRANSCRIPT.csv'):
             zip_ref.extract(f, transcripts_dir)
@@ -26,7 +27,7 @@ def extract_files(zip_file, out_dir, delete_zip=False):
 
 if __name__ == '__main__':
 
-    dir_name = 'volumes/'
+    dir_name = 'volumes_processing/'
 
     out_dir = 'data/raw'
 
