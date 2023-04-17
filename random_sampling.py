@@ -59,7 +59,6 @@ def create_sample_dicts(crop_width):
         outfile = path + filename
         np.savez(outfile, *normal_samples[key])
 
-
 def rand_samp_train_test_split(npz_file_dir):
 
     npz_files = os.listdir(npz_file_dir)
