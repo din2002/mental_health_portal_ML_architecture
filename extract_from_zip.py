@@ -27,7 +27,7 @@ def extract_files(zip_file, out_dir, delete_zip=False):
 
 if __name__ == '__main__':
 
-    dir_name = 'volumes_processing/'
+    dir_name = 'volumes/'
 
     out_dir = 'data/raw'
 
