@@ -52,8 +52,9 @@ def concatenate_segments(participant_dir, partic_id, remove_segment=True):
 
 
 if __name__ == '__main__':
-    dir_name = r'C:/Dinesh/SEM-VI/RBL/Mental_Health_Portal/data/raw/audio'
-    out_dir = r'C:/Dinesh/SEM-VI/RBL/Mental_Health_Portal/data/processed'
+    #Upadte directory name as per you data
+    dir_name = r'/data/audio'
+    out_dir = r'/data/processed'
     for file in os.listdir(dir_name):
         if file.endswith('.wav'):
             filename = os.path.join(dir_name,file)
